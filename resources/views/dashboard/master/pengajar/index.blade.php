@@ -45,10 +45,10 @@
     <div class="container-fluid">
       <div class="col-sm-12">
         <div class="card">
-          <div class="card-header">
+          <!-- <div class="card-header">
             <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-original-title="test"
               data-bs-target="#addPengajar">Tambah Jadwal Pengajar</button>
-          </div>
+          </div> -->
           <div class="card-body">
             <div class="table-responsive">
               <table class="display table table-bordered" id="basic-1">
@@ -60,7 +60,7 @@
                     <th>Waktu Mulai</th>                    
                     <th>Waktu Sesesai</th>                    
                     <th>Status</th>                    
-                    <th>Action</th>
+                    <!-- <th>Action</th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -84,7 +84,7 @@
                           </span>
                         </td>
                       @endif
-                      <td>
+                      <!-- <td>
                         <form method="POST" action="pengajar/delete/{{ $a['id_pengajar'] }}">
                           @csrf
                           <a type="button" class="btn btn-primary btn-xs edit" data-bs-id="{{ $a->id_pengajar }}"><i
@@ -92,7 +92,7 @@
                           <input name="_method" type="hidden" class="btn-primary btn-xs" value="DELETE">
                           <a type="submit" class="btn btn-danger btn-xs show_confirm"><i class="fa fa-trash"></i></a>
                         </form>
-                      </td>
+                      </td> -->
                     </tr>
                   @endforeach
                 </tbody>

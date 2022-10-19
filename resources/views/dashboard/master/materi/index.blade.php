@@ -2,7 +2,7 @@
 @section('content')
   @pushOnce('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/datatables.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/sweetalert2.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/sweetalert2.css') }}">    
   @endPushOnce
   <div class="page-body">
     <div class="container-fluid">
@@ -46,8 +46,8 @@
       <div class="col-sm-12">
         <div class="card">
           <div class="card-header">
-            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-original-title="test"
-              data-bs-target="#addThnAkademik">Add Materi Diklat</button>
+            <!-- <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-original-title="test"
+              data-bs-target="#addThnAkademik">Add Materi Diklat</button> -->
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -57,18 +57,19 @@
                     <th style="width: 55px">No</th>                    
                     <th>Judul Materi</th>
                     <th>Penulis</th>
-                    <th>Kategori Materi</th>
+                    <th>Materi</th>
+                    
                     <th>Status</th>
-                    <th>Action</th>
+                    <!-- <th>Action</th> -->
                   </tr>
                 </thead>
                 <tbody>
                   @foreach ($data as $a)
                     <tr style="text-align: center">
                       <td>{{ $loop->iteration }}</td>                      
-                      <td>{{ $a['nm_materi'] }}</td>
-                      <td>{{ $a['nm_uploader'] }}</td>
-                      <td>{{ $a['kat_materi'] }}</td>
+                      <td ><a href="{{ $a['link']}}">{{ $a['nm_materi'] }}</a></td>
+                      <td >{{ $a['nm_uploader'] }}</td>                            
+                      <td><a href="www.google.com"target="_blank"><img src="{{asset('assets/images/qrflipp.png')}}"width="100"height="100"></a></td>
                       @if ($a['stts_materi'] == 'Active')
                         <td>
                           <span class="span badge rounded badge-success">
@@ -82,7 +83,7 @@
                           </span>
                         </td>
                       @endif
-                      <td>
+                      <!-- <td>
                         <form method="POST" action="thnakademik/delete/{{ $a['id_tahun'] }}">
                           @csrf
                           <a type="button" class="btn btn-primary btn-xs edit" data-bs-id="{{ $a->id_tahun }}"><i
@@ -90,7 +91,7 @@
                           <input name="_method" type="hidden" class="btn-primary btn-xs" value="DELETE">
                           <a type="submit" class="btn btn-danger btn-xs show_confirm"><i class="fa fa-trash"></i></a>
                         </form>
-                      </td>
+                      </td> -->
                     </tr>
                   @endforeach
                 </tbody>
@@ -99,38 +100,52 @@
           </div>
         </div>
       </div>
-      
+      <!-- 
       <div class="col-sm-12 col-xl-6 xl-100">
                 <div class="card height-equal">
                     <div class="card-header pb-0">
-                        <h5>Pill Tabs With Icon</h5>
+                        <h5>Tutorial Transisi</h5>
                     </div>
                     <div class="card-body">
-                        <ul class="nav nav-pills" id="pills-icontab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="pills-iconhome-tab" data-bs-toggle="pill" href="#pills-iconhome" role="tab" aria-controls="pills-iconhome" aria-selected="true"><i class="icofont icofont-ui-home"></i>Home</a>
+                        <ul class="nav nav-pills" id="deskripsi" role="tablist">
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>    
+                        <div class="dropdown-menu"><a class="dropdown-item" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a><a class="dropdown-item" href="#">Separated link</a></div>
+                      </li>
+                        <li class="nav-item">
+                                <a class="nav-link active" id="pills-iconhome-tab" data-bs-toggle="pill" href="#pills-iconhome" role="tab" aria-controls="pills-iconhome" aria-selected="true"><i class="icofont icofont-ui-home"></i>Materi</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="pills-iconprofile-tab" data-bs-toggle="pill" href="#pills-iconprofile" role="tab" aria-controls="pills-iconprofile" aria-selected="false">
-                                    <i class="icofont icofont-man-in-glasses"></i>Profile
+                                    <i class="icofont icofont-man-in-glasses"></i>Pengajar
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="pills-iconcontact-tab" data-bs-toggle="pill" href="#pills-iconcontact" role="tab" aria-controls="pills-iconcontact" aria-selected="false">
-                                    <i class="icofont icofont-contacts"></i>Contact
+                                    <i class="icofont icofont-contacts"></i>Pre-Test
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-iconfile-tab" data-bs-toggle="pill" href="#pills-iconcontact" role="tab" aria-controls="pills-iconfile" aria-selected="false">
+                                    <i class="icofont icofont-file"></i>Materi
                                 </a>
                             </li>
                         </ul>
-                        <div class="tab-content" id="pills-icontabContent">
+                        <div class="tab-content" id="deskripsiContent">
                             <div class="tab-pane fade show active" id="pills-iconhome" role="tabpanel" aria-labelledby="pills-iconhome-tab">
-                                <p class="mb-0 m-t-30">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It was popularised in the 1960s with the
-                                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumIt was popularised in the 1960s with the
-                                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publish It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                </p>
-                            </div>
+                              <p class="mb-0 m-t-30">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It was popularised in the 1960s with the
+                                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumIt was popularised in the 1960s with the
+                                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publish It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                              </p>
+                              <br>
+                                <a href="https://online.flippingbook.com/view/559602170/" class="fbo-embed" data-fbo-id="fa31f98629" data-fbo-ratio="3:2" data-fbo-lightbox="yes" data-fbo-width="100%" data-fbo-height="auto" data-fbo-version="1" style="max-width: 100%">Welcome Guide to FlippingBook Online</a><script async defer src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=559602170"></script>                                                                                            
+                                <div class="card-body">
+                            <iframe width="100%" height="357" src="https://www.youtube.com/embed/F7hepqqJu5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <img src="qrflipp.png" alt="">
+                              </div>
+                            </div>                                                     
                             <div class="tab-pane fade" id="pills-iconprofile" role="tabpanel" aria-labelledby="pills-iconprofile-tab">
                                 <p class="mb-0 m-t-30">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -149,11 +164,22 @@
                                     release of Letraset sheets containing Lorem Ipsum passages, and more recently
                                 </p>
                             </div>
+                            <div class="tab-pane fade" id="pills-iconfile" role="tabpanel" aria-labelledby="pills-iconfile-tab">
+                                <p class="mb-0 m-t-30">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It was popularised in the 1960s with the
+                                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumIt was popularised in the 1960s with the
+                                    release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                </p>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>    
+    </div> -->
+                            </div>
   </div>
   @pushOnce('js')
     @include('dashboard.master.thnakademik.add')
@@ -164,6 +190,11 @@
     <script src="{{ asset('assets/js/form-validation-custom.js') }}"></script>
     <script src="{{ asset('assets/js/tooltip-init.js') }}"></script>
     <script type="text/javascript">
+    <script src="{{ asset('assets/js/bootstrap/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="{{ asset('assets/js/theme-customizer/customizer.js') }}"></script>        
+    <script>
       $('.show_confirm').click(function(e) {
         var form = $(this).closest("form");
         e.preventDefault();

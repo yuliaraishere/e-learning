@@ -217,7 +217,7 @@
                 </li>
                 <li class="sidebar-main-title">
                   <div>
-                    <h6>General </h6>
+                    <h6>Menu </h6>
                   </div>
                 </li>
                 <li class="dropdown"><a class="nav-link menu" href="{{ route('home') }}"><i
@@ -226,7 +226,7 @@
               </li>
               <li class="sidebar-main-title">
                 <div>
-                  <h6>Kegiatan</h6>
+                  <h6>Kegiatanku</h6>
                 </div>
                 <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
                       data-feather="clipboard"></i><span>Kegiatan</span></a>
@@ -246,7 +246,7 @@
                 <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
                       data-feather="clipboard"></i><span>Materi Diklat</span></a>
                   <ul class="nav-submenu menu-content">
-                    <li><a href="{{ route('pengajar') }}"> Pranata Komputer </a></li>                  
+                    <li><a href="{{ route('tipografi') }}"> Tipografi </a></li>                  
                   </ul>
                 </li>
                 <li class="dropdown"><a href="{{ route('kelas')}}"><i

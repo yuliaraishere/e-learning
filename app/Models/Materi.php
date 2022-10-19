@@ -12,6 +12,7 @@ class Materi extends Model
     protected $fillable = [
         'nm_materi',
         'nm_uploader',
+        'link',
         'stts_materi'
     ];
 }

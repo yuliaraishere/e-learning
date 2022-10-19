@@ -12,6 +12,7 @@ use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\ThnAkademikController;
+use App\Http\Controllers\UmumController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -136,9 +137,14 @@ Route::prefix('master')->group(function () {
         Route::put('update/{id}', 'update')->name('guru/update');
         Route::delete('delete/{id}', 'destroy')->name('guru/delete');
     });
+
+
+    Route::get('/tipografi', [\App\Http\Controllers\UmumController::class, 'tp'])->name('tipografi');
 });
 
 Route::get('/job-search',  [App\Http\Controllers\JobController::class, 'index'])->name('job-search');
+
+
 
 Route::get('/zoom', [\App\Http\Controllers\ZoomController::class, 'index'])->name('zoom');
 Route::get('/zoom/create', [\App\Http\Controllers\ZoomController::class, 'create'])->name('zoom/create');

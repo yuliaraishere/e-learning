@@ -24,7 +24,8 @@ class MateriController extends Controller
         $this->validate($request, [            
             'id_materi'     => 'required',
             'nm_materi'     => 'required',
-            'nm_uploader'    => 'required',            
+            'nm_uploader'   => 'required',            
+            'link'          => 'required',            
             'stts_materi'   => 'required'
         ]);
 
@@ -32,7 +33,8 @@ class MateriController extends Controller
         Materi::create([
             'id_materi'     => $request->id_materi,
             'nm_materi'     => $request->nm_materi,
-            'nm_uploader'     => $request->nm_uploader,
+            'nm_uploader'   => $request->nm_uploader,
+            'link'          => $request->link,
             'stts_materi'   => $request->stts_materi
             
         ]);
@@ -53,6 +55,7 @@ class MateriController extends Controller
             'id_materi'     => 'required',
             'nm_materi'     => 'required',
             'nm_uploader'    => 'required',            
+            'link'    => 'required',            
             'stts_materi'   => 'required'
         ]);
 
@@ -60,6 +63,7 @@ class MateriController extends Controller
         $data->id_materi = $request->id_materi;
         $data->nm_materi = $request->nm_materi;
         $data->nm_uploader = $request->nm_uploader;        
+        $data->link = $request->link;        
         $data->stts_materi = $request->stts_materi;
         $data->update();
         return response()->json(['success' => 'Pengajar successfully updated!']);

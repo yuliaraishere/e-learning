@@ -20,7 +20,7 @@
     <div class="page-header">
       <div class="row">
         <div class="col-lg-6">
-          <h3>Learning List</h3>
+          <h3>Kelas Diklat Umum</h3>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="https://laravel.pixelstrap.com/viho/dashboard">Home</a></li>
               <li class="breadcrumb-item">Learning</li>
@@ -49,7 +49,7 @@
 	                                    <div class="blog-bottom-content">
 	                                        <ul class="blog-social">
 	                                            <li>by: Agus Supriyono, S.S., M.A.P.</li>
-	                                            <li>10 Slots Left</li>
+	                                            <li>10 Slot Tersisa</li>
 	                                        </ul>
 	                                        <hr />
 											
@@ -67,6 +67,7 @@
                                   </div>
 	                    </div>
 	                </div>
+					
 	                <div class="col-xl-12 col-sm-6">
 	                    <div class="card">
 	                        <div class="blog-box blog-list row">

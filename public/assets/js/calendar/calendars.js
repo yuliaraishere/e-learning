@@ -48,7 +48,7 @@ function hexToRGBA(hex) {
     calendar = new CalendarInfo();
     id += 1;
     calendar.id = String(id);
-    calendar.name = 'My Calendar';
+    calendar.name = 'Agenda Saya';
     calendar.color = '#ffffff';
     calendar.bgColor = '#24695c';
     calendar.dragBgColor = '#24695c';
@@ -58,7 +58,7 @@ function hexToRGBA(hex) {
     calendar = new CalendarInfo();
     id += 1;
     calendar.id = String(id);
-    calendar.name = 'Company';
+    calendar.name = 'Diklat';
     calendar.color = '#ffffff';
     calendar.bgColor = '#ba895d';
     calendar.dragBgColor = '#ba895d';
@@ -68,7 +68,7 @@ function hexToRGBA(hex) {
     calendar = new CalendarInfo();
     id += 1;
     calendar.id = String(id);
-    calendar.name = 'Family';
+    calendar.name = 'Acara';
     calendar.color = '#ffffff';
     calendar.bgColor = '#ff5583';
     calendar.dragBgColor = '#ff5583';

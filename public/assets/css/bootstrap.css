@@ -3313,8 +3313,8 @@ textarea.form-control-lg {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #0d6efd; }
+  color: #0000;
+  background-color: #ffc10; }
 
 .nav-fill > .nav-link,
 .nav-fill .nav-item {
@@ -4065,7 +4065,7 @@ textarea.form-control-lg {
   background-color: #fff3cd;
   border-color: #ffecb5; }
   .alert-warning .alert-link {
-    color: #523e02; }
+    color: #0000; }
 
 .alert-danger {
   color: #842029;
@@ -6239,7 +6239,7 @@ textarea.form-control-lg {
   color: #0dcaf0 !important; }
 
 .text-warning {
-  color: #ffc107 !important; }
+  color: #0000 !important; }
 
 .text-danger {
   color: #dc3545 !important; }
