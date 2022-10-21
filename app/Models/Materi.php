@@ -13,6 +13,7 @@ class Materi extends Model
         'nm_materi',
         'nm_uploader',
         'link',
+        'kat_materi',
         'stts_materi'
     ];
 }

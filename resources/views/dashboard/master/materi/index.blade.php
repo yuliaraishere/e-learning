@@ -67,19 +67,19 @@
                   @foreach ($data as $a)
                     <tr style="text-align: center">
                       <td>{{ $loop->iteration }}</td>                      
-                      <td ><a href="{{ $a['link']}}">{{ $a['nm_materi'] }}</a></td>
-                      <td >{{ $a['nm_uploader'] }}</td>                            
+                      <td ><a href="{{ $a['link']}}" target="_blank">{{ $a['nm_materi'] }}</a></td>
+                      <td >{{ $a['nm_uploader'] }}</td>                                                        
                       <td><a href="www.google.com"target="_blank"><img src="{{asset('assets/images/qrflipp.png')}}"width="100"height="100"></a></td>
                       @if ($a['stts_materi'] == 'Active')
                         <td>
                           <span class="span badge rounded badge-success">
-                            Active
+                            Sedang Aktif
                           </span>
                         </td>
                       @else
                         <td>
                           <span class="span badge rounded badge-danger">
-                            Non Active
+                            Tidak Aktif
                           </span>
                         </td>
                       @endif
