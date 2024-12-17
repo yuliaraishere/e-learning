@@ -12,9 +12,8 @@
         <div class="col-lg-6">
           <h3>General</h3>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="https://laravel.pixelstrap.com/viho/dashboard">Home</a></li>
-              <li class="breadcrumb-item">Widgets</li>
-            <li class="breadcrumb-item active">General</li>
+            <li class="breadcrumb-item"><a href="https://laravel.pixelstrap.com/viho/dashboard">Beranda</a></li>
+              <li class="breadcrumb-item">Dashboard</li>            
           </ol>
         </div>
         <div class="col-lg-6">

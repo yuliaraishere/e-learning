@@ -13,6 +13,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\ThnAkademikController;
 use App\Http\Controllers\UmumController;
+use App\Http\Controllers\KelaskuController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes(['verify' => true]);
@@ -137,9 +138,18 @@ Route::prefix('master')->group(function () {
         Route::put('update/{id}', 'update')->name('guru/update');
         Route::delete('delete/{id}', 'destroy')->name('guru/delete');
     });
+    
+    Route::controller(KelaskuController::class)->prefix('kelasku')->group(function () {
+        Route::get('', 'index')->name('kelasku');        
+        Route::get('hardskill', 'hardskill')->name('kelasku/hardskill');
+        
+    });
 
 
     Route::get('/tipografi', [\App\Http\Controllers\UmumController::class, 'tp'])->name('tipografi');
+    Route::get('/sertifikat', [\App\Http\Controllers\SertifikatController::class, 'index'])->name('sertifikat');
+    // Route::get('/kelasku', [\App\Http\Controllers\KelaskuController::class, 'index'])->name('kelasku');
+    // Route::get('/hardskill', [\App\Http\Controllers\KelaskuController::class, 'hard'])->name('kelasku/hardskill');
 });
 
 Route::get('/job-search',  [App\Http\Controllers\JobController::class, 'index'])->name('job-search');

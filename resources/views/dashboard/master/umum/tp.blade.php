@@ -23,13 +23,14 @@
         </div>
       </div>
     </div>
+    
 
     <div class="col-sm-12 col-xl-6 xl-100">
                 <div class="card">
                   <div class="card-header pb-0">
                     <h5>Tipografi</h5>
                   </div>
-                  <div class="card-body">
+                  <div class="card-body">        
                     <ul class="nav nav-pills nav-warning" id="pills-warning-tab" role="tablist">
                       <li class="nav-item"><a class="nav-link active" id="pills-warning-deskripsi-tab" data-bs-toggle="pill" href="#pills-warning-deskripsi" role="tab" aria-controls="pills-warning-deksripsi" aria-selected="true"><i class="icofont icofont-file"></i>Deskripsi</a></li>
                       <li class="nav-item"><a class="nav-link" id="pills-warning-ebook-tab" data-bs-toggle="pill" href="#pills-warning-ebook" role="tab" aria-controls="pills-warning-ebook" aria-selected="false"><i class="icofont icofont-book-alt"></i>E-Book</a></li>
@@ -46,11 +47,17 @@
                       </div>
                       </div>
                       <div class="tab-pane fade" id="pills-warning-video" role="tabpanel" aria-labelledby="pills-warning-video-tab">
-                        <h2>yt</h2>
+                      <br>
+                      <br>  
+                      <div class="card-board">
+                        <iframe width="900px" height="500px" src="https://www.youtube.com/embed/5hUriz2KAjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                       </div>
                       <div class="tab-pane fade" id="pills-warning-audio" role="tabpanel" aria-labelledby="pills-warning-audio-tab">
-                        <h2>nanti isi audio</h2>
-                        <audio src="{{asset('assets/audio/horse.ogg')}}"controls></audio>
+                      <br>
+                      <br>
+                        <div class="card-board"></div>
+                        <audio src="{{asset('assets/audio/tipografi.ogg')}}"controls height="200"></audio>
                       </div>
                     </div>
                   </div>

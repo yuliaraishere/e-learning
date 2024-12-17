@@ -203,8 +203,16 @@
             <h6 class="mt-3 f-14 f-w-600">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h6>
           </a>
           <p class="mb-0 font-roboto">{{ Auth::user()->jabatan }}</p>
-          <p class="mb-0 font-roboto">{{ Auth::user()->email }}</p>
-          
+          <p class="mb-0 font-roboto">{{ Auth::user()->email }}</p>          
+          <!-- <div class="progress">
+            <div class="progress-bar-animated progress-bar-striped bg-secondary" role="progressbar"aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%" margin="center">75%
+            </div>
+          </div> -->
+          <div class="progress position-relative">
+    <div class="progress-bar-animated progress-bar-striped bg-warning" role="progressbar" style="width: 73%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+    <medium class="justify-content-center d-flex position-absolute w-100">731 / 1000</medium>
+    </div>
+          <h6>Intermediate</h6>
         </div>
         <nav>
           <div class="main-navbar">
@@ -223,19 +231,22 @@
                 <li class="dropdown"><a class="nav-link menu" href="{{ route('home') }}"><i
                       data-feather="home"></i><span>Dashboard</span></a>
                 </li>
+                <li class="dropdown"><a class="nav-link menu" href="{{ route('sertifikat') }}"><i
+                      data-feather="bookmark"></i><span>Sertifikat</span></a>
+                </li>
               </li>
               <li class="sidebar-main-title">
                 <div>
                   <h6>Kegiatanku</h6>
                 </div>
-                <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i
+                <li class="sidebar-main-title"><a class="nav-link menu" href="{{ route('kelasku') }}"><i
                       data-feather="clipboard"></i><span>Kegiatan</span></a>
-                  <ul class="nav-submenu menu-content">
+                  <!-- <ul class="nav-submenu menu-content">
                     <li><a href="{{ route('pengajar') }}"> Jadwal Diklat </a></li>                  
                     <li><a href="{{ route('materi') }}"> Materi Diklat </a></li>                  
                     <li><a href="{{ route('pengajar') }}"> Presensi Diklat </a></li>                  
                     <li><a href="{{ route('pengajar') }}"> Penilaian Diklat </a></li>                  
-                  </ul>
+                  </ul> -->
                 </li>
               </li>
                 <li class="sidebar-main-title">

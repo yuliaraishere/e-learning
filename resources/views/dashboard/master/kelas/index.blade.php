@@ -44,12 +44,16 @@
 	                            <div class="col-xl-5 col-12"><img class="img-fluid sm-100-w" src="{{asset('assets/images/faq/1.jpg')}}" /></div>
 	                            <div class="col-xl-7 col-12">
 	                                <div class="blog-details">
+										<h1>Sesi I</h1>
 	                                    <div class="blog-date"><span>01</span> November 2022</div>
-	                                    <a href="learning-detailed.html"> <h6>Bahasa Java</h6></a>
+	                                    <div class="blog-date"><span>----------------</span></div>
+	                                    <div class="blog-date"><span>03</span> November 2022</div>
+	                                    <a href="learning-detailed.html"> <h6>Bahasa Inggris</h6></a>
 	                                    <div class="blog-bottom-content">
 	                                        <ul class="blog-social">
-	                                            <li>by: Agus Supriyono, S.S., M.A.P.</li>
-	                                            <li>10 Slot Tersisa</li>
+	                                            <li>Pengajar : Agus Supriyono, S.S., M.A.P.</li>
+	                                            <li>10 Slot Tersisa</li>												
+	                                            <li>Jumlah JP : 12 JP</li>												
 	                                        </ul>
 	                                        <hr />
 											
@@ -92,7 +96,7 @@
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="col-xl-4 xl-50 col-sm-6 box-col-6">
+	                <!--<div class="col-xl-4 xl-50 col-sm-6 box-col-6">
 	                    <div class="card">
 	                        <div class="product-box learning-box">
 	                            <div class="product-img">
@@ -252,7 +256,7 @@
 	                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has.</p>
 	                            </div>
 	                        </div>
-	                    </div>
+	                    </div>-->
 	                </div>
 	            </div>
 	        </div>	          

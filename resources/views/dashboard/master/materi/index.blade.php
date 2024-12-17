@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.nav')
 @section('content')
   @pushOnce('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/datatables.css') }}">
@@ -69,7 +69,7 @@
                       <td>{{ $loop->iteration }}</td>                      
                       <td ><a href="{{ $a['link']}}" target="_blank">{{ $a['nm_materi'] }}</a></td>
                       <td >{{ $a['nm_uploader'] }}</td>                                                        
-                      <td><a href="www.google.com"target="_blank"><img src="{{asset('assets/images/qrflipp.png')}}"width="100"height="100"></a></td>
+                      <td><a href="www.google.com"target="_blank"><img src="{{asset('assets/images/qrflipp.png')}}"width="100"height="100"></td>
                       @if ($a['stts_materi'] == 'Active')
                         <td>
                           <span class="span badge rounded badge-success">
